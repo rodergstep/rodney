@@ -1,0 +1,124 @@
+---
+title: Blog
+---
+
+{% extends "layouts/_layout.html" %} {% block content %}
+<!-- begin header -->
+{% include "partials/_header.html" %}
+<!-- end header -->
+<!-- begin main -->
+<main class="main">
+  <article class="blog">
+    <div class="container">
+      <h1 class="content__title heading wow fadeInUp">Latest</h1>
+      <div class="filter">
+        <ul class="filter__nav wow fadeInUp" data-wow-delay="0.3s">
+          <li>
+            <button class="btn filter__nav-btn is-current" data-filter="all">
+              All
+            </button>
+          </li>
+          <li>
+            <button class="btn filter__nav-btn" data-filter="news">News</button>
+          </li>
+          <li>
+            <button class="btn filter__nav-btn" data-filter="tips">
+              Stylist Tips
+            </button>
+          </li>
+          <li>
+            <button class="btn filter__nav-btn" data-filter="products">
+              Products
+            </button>
+          </li>
+          <li>
+            <button class="btn filter__nav-btn" data-filter="trends">
+              Trends
+            </button>
+          </li>
+        </ul>
+        <div class="blog__cards wow fadeInUp" data-wow-delay="0.6s">
+          <div class="blog__card filter__block" data-filter="tips">
+            <a href="blog-article.html" class="blog__card-link">
+              <div class="bg-absolute"><img src="img/blog/1.jpg" alt="" /></div>
+              <span class="blog__card-date">Oct 12</span>
+              <h3 class="blog__card-title">
+                We’re hiring! Take your hairdressing career to the next level
+              </h3>
+              <div class="blog__card-footer">
+                <p class="blog__card-tags">NEWS</p>
+              </div>
+            </a>
+          </div>
+          <div class="blog__card filter__block" data-filter="news">
+            <a href="blog-article.html" class="blog__card-link">
+              <div class="bg-absolute"><img src="img/blog/2.jpg" alt="" /></div>
+              <span class="blog__card-date">Oct 12</span>
+              <h3 class="blog__card-title">
+                Add New Life To Your Balayage With Instant Highlights
+              </h3>
+              <div class="blog__card-footer">
+                <p class="blog__card-tags">NEWS / STYLIST TIPS</p>
+                <div class="blog__card-more">READ MORE</div>
+              </div>
+            </a>
+          </div>
+          <div class="blog__card filter__block" data-filter="products">
+            <a href="blog-article.html" class="blog__card-link">
+              <div class="bg-absolute"><img src="img/blog/3.jpg" alt="" /></div>
+              <span class="blog__card-date">Oct 12</span>
+              <h3 class="blog__card-title">
+                NEW KÉRASTASE ELIXIR ULTIME – ULTIMATE SOFTNESS AND SHINE
+              </h3>
+              <div class="blog__card-footer">
+                <p class="blog__card-tags">HAIR PRODUCTS / NEWS</p>
+              </div>
+            </a>
+          </div>
+          <div class="blog__card filter__block" data-filter="products">
+            <a href="blog-article.html" class="blog__card-link">
+              <div class="bg-absolute"><img src="img/blog/4.jpg" alt="" /></div>
+              <span class="blog__card-date">Oct 12</span>
+              <h3 class="blog__card-title">
+                Piiq Mirror Technology Global Launch at Rodney Wayne
+              </h3>
+              <div class="blog__card-footer">
+                <p class="blog__card-tags">NEWS / STYLIST TIPS</p>
+              </div>
+            </a>
+          </div>
+          <div class="blog__card filter__block" data-filter="tips">
+            <a href="blog-article.html" class="blog__card-link">
+              <div class="bg-absolute"><img src="img/blog/3.jpg" alt="" /></div>
+              <span class="blog__card-date">Oct 12</span>
+              <h3 class="blog__card-title">
+                NEW KÉRASTASE ELIXIR ULTIME – ULTIMATE SOFTNESS AND SHINE
+              </h3>
+              <div class="blog__card-footer">
+                <p class="blog__card-tags">HAIR PRODUCTS / NEWS</p>
+              </div>
+            </a>
+          </div>
+          <div class="blog__card filter__block" data-filter="trends">
+            <a href="blog-article.html" class="blog__card-link">
+              <div class="bg-absolute"><img src="img/blog/4.jpg" alt="" /></div>
+              <span class="blog__card-date">Oct 12</span>
+              <h3 class="blog__card-title">
+                Piiq Mirror Technology Global Launch at Rodney Wayne
+              </h3>
+              <div class="blog__card-footer">
+                <p class="blog__card-tags">NEWS / STYLIST TIPS</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+<!-- end main -->
+<!-- begin footer -->
+{% include "partials/_footer.html" %}
+<!-- end footer -->
+
+{% endblock %}

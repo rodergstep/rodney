@@ -1,0 +1,96 @@
+---
+title: Locations
+---
+
+{% extends "layouts/_layout.html" %} {% block content %}
+<!-- begin header -->
+{% include "partials/_header.html" %}
+<!-- end header -->
+<!-- begin main -->
+<main class="main">
+  <article class="panel">
+    <div class="row no-gutters">
+      <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="locations">
+          <div class="locations__inner">
+            <h2 class="content__title">Locations</h2>
+            <form action="#" class="locatiions__form">
+              <div class="form-group">
+                <button class="btn btn-find-nearest">
+                  <span>Find nearest</span>
+                  <svg class="icon icon-location">
+                    <use xlink:href="img/sprite.svg#icon-location"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="form-group">
+                <div class="select-custom">
+                  <select>
+                    <option value="0">Rodney Wayne</option>
+                    <option value="1">Rodney Wayne2</option>
+                    <option value="2">Rodney Wayne3</option>
+                    <option value="3">Rodney Wayne4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="select-custom select-custom--labeled">
+                  <label>Region</label>
+                  <select>
+                    <option value="0">ALL</option>
+                    <option value="1">Rodney Wayne2</option>
+                    <option value="2">Rodney Wayne3</option>
+                    <option value="3">Rodney Wayne4</option>
+                  </select>
+                </div>
+              </div>
+              <p class="locations__or">OR</p>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter location"
+                    aria-label="Enter location"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn" type="button" id="button-addon2">
+                      <svg class="icon icon-search">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="search__result">
+                <p class="search__result-title">Search results…</p>
+                <div class="search-result__item">
+                  <div class="search-result__icon">
+                    <svg class="icon icon-location">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    Rodney Wayne Fort Street 58 Fort Street, Auckland City 1010
+                    09 308 9942
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8  wow fadeIn">
+        <div
+          class="map-canvas"
+          data-latitude="-33.890542"
+          data-longitude="151.274856"
+        ></div>
+      </div>
+    </div>
+  </article>
+</main>
+<!-- end main -->
+
+{% endblock %}

@@ -1,0 +1,117 @@
+---
+title: Rewards
+---
+
+{% extends "layouts/_layout.html" %} {% block content %}
+<!-- begin header -->
+{% include "partials/_header.html" %}
+<!-- end header -->
+<!-- begin main -->
+<main class="main">
+  <article class="panel">
+    <div class="row no-gutters">
+      <div class="col-md-6 wow fadeIn">
+        <div class="panel__picture">
+          <div class="bg-absolute"><img src="img/rewards.jpg" alt="" /></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel__text panel__text--bg-colored">
+          <h1 class="content__title wow fadeInUp">Rewards</h1>
+          <p class="wow fadeInUp" data-wow-delay="0.3s">
+            <span class="font-weight-bold">Love rewards?</span> At Rodney Wayne
+            we take the time to listen and care. We enhance the natural beauty
+            of your hair without compromising the health or integrity of your
+            hair. Whatever your mood or lifestyle, we can tailor a look that is
+            perfect for you.
+          </p>
+          <div class="rodney-sign wow fadeInUp" data-wow-delay="0.6s">
+            <img src="img/rodneys-sign.png" alt="Rodneys sign.png" />
+          </div>
+          <div class="content__links wow fadeInUp" data-wow-delay="0.6s">
+            <a href="#" class="link-effect">Terms & Conditions</a>
+            <a href="#" class="link-effect">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section class="section-accordion">
+    <div class="container">
+      <h2 class="content__title wow fadeInUp">Frequently Asked Questions</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8 wow fadeInUp" data-wow-delay="0.3s">
+          <div id="accordion">
+            {% for item in [{ title: "What is Rodney Wayne Rewards?", text:
+            "Rodney Wayne Rewards is our national reward programme across
+            participating Rodney Wayne salons and Shampoo ‘n’ Things stores,
+            where you can:", paragraph2: "Earn points on your purchases",
+            paragraph3: "Get special member-only products and discounts",
+            paragraph4: "Be inspired with hair styling tips and new season
+            trends" }, { title: "How do I join Rodney Wayne Rewards?", text:
+            "Lorem ipsum dolor sit amet"}, { title: "How does it work?", text:
+            "Lorem ipsum dolor sit amet"}, { title: "Do I get other special
+            discounts with my Rodney Wayne Rewards membership?", text: "Lorem
+            ipsum dolor sit amet"}, { title: "How do I earn points? ", text:
+            "Lorem ipsum dolor sit amet"}, { title: "How can I find out how many
+            points I have?", text: "Lorem ipsum dolor sit amet"}, { title: "Do
+            points expire?", text: "Lorem ipsum dolor sit amet"}, { title: "How
+            will I know when my points expire?", text: "Lorem ipsum dolor sit
+            amet"}, { title: "How do I join Rodney Wayne Rewards?", text: "Lorem
+            ipsum dolor sit amet"}, { title: "How does it work?", text: "Lorem
+            ipsum dolor sit amet"}, { title: "Do I get other special discounts
+            with my Rodney Wayne Rewards membership?", text: "Lorem ipsum dolor
+            sit amet"}, { title: "How do I earn points?", text: "Lorem ipsum
+            dolor sit amet"}] %}
+            <div class="card">
+              <div class="card-header" id="heading{{loop.index}}">
+                <h5 class="mb-0">
+                  <button
+                    class="btn"
+                    data-toggle="collapse"
+                    data-target="#collapse{{loop.index}}"
+                    aria-expanded="{% if loop.index == 1 %}
+                    true
+                  {% else %}
+                    false
+                  {% endif %}"
+                    aria-controls="collapse{{loop.index}}"
+                  >
+                    {{ item.title }}
+                  </button>
+                </h5>
+              </div>
+              <div
+                id="collapse{{loop.index}}"
+                class="collapse {% if loop.index == 1 %}
+                show      
+              {% endif %}"
+                aria-labelledby="heading{{loop.index}}"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <p>{{ item.text }}</p>
+                  {% if item.paragraph2 !== "" %}
+                  <p>{{ item.paragraph2 }}</p>
+                  {% endif %} {% if item.paragraph3 !== "" %}
+                  <p>{{ item.paragraph3 }}</p>
+                  {% endif %} {% if item.paragraph4 !== "" %}
+                  <p>{{ item.paragraph4 }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- end main -->
+<!-- begin footer -->
+{% include "partials/_footer.html" %}
+<!-- end footer -->
+
+{% endblock %}
